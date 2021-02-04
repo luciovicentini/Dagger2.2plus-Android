@@ -3,6 +3,7 @@ package com.luciovicentini.daggerpractice.di;
 import android.app.Application;
 
 import com.luciovicentini.daggerpractice.BaseApplication;
+import com.luciovicentini.daggerpractice.SessionManager;
 import com.luciovicentini.daggerpractice.di.auth.AuthViewModelsModule;
 
 import javax.inject.Singleton;
@@ -19,10 +20,11 @@ import dagger.android.support.AndroidSupportInjectionModule;
                 ActivityBuildersModule.class,
                 AppModule.class,
                 ViewModelFactoryModule.class,
-
         }
 )
 public interface AppComponent extends AndroidInjector<BaseApplication> {
+
+    SessionManager sessionManager();
 
     @Component.Builder
     interface Builder {
