@@ -9,7 +9,7 @@ public class User {
     @Expose
     private int id;
 
-    @SerializedName("user")
+    @SerializedName("username")
     @Expose
     private String username;
 
